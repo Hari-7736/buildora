@@ -34,8 +34,9 @@ a{color:inherit}:focus-visible{outline:3px solid var(--br);outline-offset:3px}im
 header{position:fixed;top:0;left:0;right:0;z-index:60;padding-top:env(safe-area-inset-top,0px);transition:background .3s}header.s{background:rgba(15,20,22,.9);backdrop-filter:blur(10px)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px;color:#EDEBE5}
 .logo{font:800 28px var(--h);text-decoration:none;letter-spacing:.03em;text-transform:uppercase}.logo i{color:var(--br);font-style:normal}
-nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}nav a{text-decoration:none;opacity:.8}nav a:hover{opacity:1;color:var(--br)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:600}nav a{text-decoration:none;opacity:.8}nav a:hover{opacity:1;color:var(--br)}
 #mb{display:none;background:none;border:1px solid #fff5;color:#fff;padding:8px 14px;font:600 14px var(--b);cursor:pointer}
+@media(max-width:1080px){nav ul{gap:14px;font-size:13px}}
 @media(max-width:900px){#mb{display:block}nav ul{display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--ink);padding:18px 22px;gap:16px}nav ul.o{display:flex}.nav>.btn{display:none}}
 /* Hero section */
 .hero{min-height:94svh;display:flex;align-items:center;padding:110px 0 60px;overflow:hidden;background:var(--ink);color:var(--on)}
@@ -71,6 +72,28 @@ nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:14px;f
 .ft a{position:relative;overflow:hidden;display:block;cursor:pointer}.ft a:first-child{grid-row:span 2}.ft img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.ft a:hover img{transform:scale(1.06)}
 .ft span,.gi span{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 18px;background:linear-gradient(transparent,#000c);color:#fff;font:800 24px var(--h);text-transform:uppercase}.ft small,.gi small{display:block;font:500 13px var(--b);text-transform:none;color:#d8d4c8}
 @media(max-width:760px){.ft{grid-template-columns:1fr;grid-template-rows:none;height:auto}.ft a{height:280px}.ft a:first-child{grid-row:auto;height:340px}}
+/* Resort section */
+.rs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.rc{position:relative;overflow:hidden;cursor:pointer;display:block;border:0;padding:0;background:none;text-align:left;height:520px}
+.rc img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.rc:hover img{transform:scale(1.06)}
+.rc span{position:absolute;left:0;right:0;bottom:0;padding:54px 22px 20px;background:linear-gradient(transparent,#000c);color:#fff;font:800 26px var(--h);text-transform:uppercase}
+.rc small{display:block;font:500 13px var(--b);text-transform:none;color:#d8d4c8}
+@media(max-width:760px){.rs{grid-template-columns:1fr}.rc{height:340px}}
+/* Auditorium section */
+#auditorium{background:radial-gradient(900px 420px at 85% 0%,#1d2a2e,transparent),#0C1113}
+.au{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:start}
+.au ul{list-style:none;margin:26px 0 30px;padding:0;display:grid;gap:14px;counter-reset:a}
+.au li{counter-increment:a;padding:14px 0 14px 54px;border-top:1px solid #ffffff1c;position:relative;font-weight:600}
+.au li::before{content:counter(a,decimal-leading-zero);position:absolute;left:0;top:10px;font:800 28px var(--h);color:var(--br)}
+.ag{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:250px;gap:14px}
+.ag>:first-child{grid-row:span 2}
+.ag button{position:relative;overflow:hidden;cursor:pointer;border:0;padding:0;background:none;text-align:left}
+.ag img{width:100%;height:100%;object-fit:cover;transition:transform .8s}.ag button:hover img{transform:scale(1.06)}
+.ag span{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;background:linear-gradient(transparent,#000c);color:#fff;font:800 22px var(--h);text-transform:uppercase}
+.ag small{display:block;font:500 13px var(--b);text-transform:none;color:#d8d4c8}
+.slot{display:grid;place-content:center;text-align:center;gap:4px;border:1px dashed #C8A15A66;background:linear-gradient(145deg,#ffffff0d,#ffffff03);color:#A9B3B6}
+.slot b{font:800 22px var(--h);text-transform:uppercase;color:var(--br)}.slot small{font-size:13px}
+@media(max-width:900px){.au{grid-template-columns:1fr}.ag{grid-auto-rows:210px}}
 /* Gallery section */
 .gal{columns:3;column-gap:14px}.gi{position:relative;break-inside:avoid;margin:0 0 14px;overflow:hidden;cursor:pointer;display:block;width:100%;border:0;padding:0;background:none;text-align:left}.gi img{width:100%;height:auto;transition:transform .7s}.gi:hover img{transform:scale(1.06)}
 .gi span{font-size:20px;transform:translateY(100%);transition:transform .35s}.gi:hover span,.gi:focus-visible span{transform:none}.gi.h{display:none}
@@ -92,6 +115,14 @@ details{border-top:1px solid var(--line);padding:20px 0}details:last-child{borde
 /* Contact section */
 .ct{display:grid;grid-template-columns:1fr 1fr;gap:56px}.ct p{margin:0 0 12px}.ct b{color:var(--on)}.f{display:grid;gap:14px}label{font-size:13px;font-weight:700;display:block;margin-bottom:5px;color:#C9D0D2}
 .i,select,textarea{width:100%;padding:13px;background:#ffffff0d;border:1px solid #ffffff2a;color:#fff;font:inherit}select option{color:#111}textarea{min-height:100px}@media(max-width:820px){.ct{grid-template-columns:1fr;gap:34px}}
+/* Contact form (glass) */
+#contact{background:radial-gradient(620px 420px at 88% 18%,rgba(200,161,90,.28),transparent),radial-gradient(520px 420px at 8% 92%,rgba(44,107,101,.35),transparent),linear-gradient(rgba(15,20,22,.88),rgba(15,20,22,.94)),url(assets/projects/h2.webp) center/cover}
+.f{padding:34px;border-radius:22px;background:linear-gradient(150deg,rgba(255,255,255,.16),rgba(255,255,255,.04)),rgba(15,20,22,.35);-webkit-backdrop-filter:blur(24px) saturate(165%);backdrop-filter:blur(24px) saturate(165%);border:1px solid rgba(255,255,255,.24);box-shadow:0 28px 70px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.35)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.f{background:rgba(24,32,36,.95)}}
+.f .i,.f select,.f textarea{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);border-radius:12px;transition:border-color .25s,background .25s,box-shadow .25s}
+.f .i:focus,.f select:focus,.f textarea:focus{outline:0;border-color:var(--br);background:rgba(255,255,255,.12);box-shadow:0 0 0 3px rgba(200,161,90,.25)}
+.f .i::placeholder,.f textarea::placeholder{color:#c3caca}
+@media(max-width:520px){.f{padding:22px}}
 /* Footer section */
 footer{background:#0A0E10;color:#8E999C;padding:28px 0;font-size:14px}footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 /* WhatsApp button */
@@ -118,7 +149,7 @@ dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh;
 <div id="bar"></div>
 <!-- Header section -->
 <header id="hd"><div class="w nav"><a class="logo" href="#top">Buildora<i>.</i></a>
-<nav aria-label="Main"><button id="mb" aria-expanded="false">Menu</button><ul id="ml"><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#projects">Projects</a></li><li><a href="#plans">Plans</a></li><li><a href="#plan3d">3D Plan</a></li><li><a href="#process">Process</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<nav aria-label="Main"><button id="mb" aria-expanded="false">Menu</button><ul id="ml"><li><a href="#top">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#plans">Plans</a></li><li><a href="#contact">Contact</a></li></ul></nav>
 <a class="btn" href="#contact">Free site visit</a></div></header>
 <main id="top">
 <!-- Hero section -->
@@ -150,6 +181,22 @@ dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh;
 <section id="projects"><div class="w">
 <div class="hd rv"><div><div class="eb">Portfolio</div><h2>Selected projects</h2></div><p>Residences and interiors delivered by our teams. Tap any image to enlarge.</p></div>
 <div class="ft rv" id="ft"></div></div></section>
+
+<!-- Resort section -->
+<section id="resort" style="background:var(--card)"><div class="w">
+<div class="hd rv"><div><div class="eb">Hospitality</div><h2>Resort</h2></div><p>Signature stay spaces with bold rooflines, glazed frontages and landscaped surroundings, built from structure to finish by one team.</p></div>
+<div class="rs rv" id="rs">
+<button class="rc" data-i="0"><img src="assets/projects/h8.webp" alt="A-Frame Studio" loading="lazy"><span>A-Frame Studio<small>Steel-framed glazing and exposed finishes</small></span></button>
+<button class="rc" data-i="1"><img src="assets/projects/h7.webp" alt="Angular Roof Residence" loading="lazy"><span>Angular Roof Residence<small>Folded roof planes with landscaped frontage</small></span></button>
+</div></div></section>
+
+<!-- Auditorium section -->
+<section class="dk" id="auditorium"><div class="w au">
+<div class="rv"><div class="eb">Premium venues</div><h2>Auditorium</h2>
+<p style="margin-top:20px">We also design and build auditoriums where sight lines, sound and finish work together, from the structure to the last light fitting.</p>
+<ul><li>Acoustic wall and ceiling treatment</li><li>Stage, lighting and sound integration</li><li>Seating layouts planned for clear views</li><li>Premium finishes and entrance lobby</li></ul>
+<a class="btn" href="#contact">Discuss an auditorium project</a></div>
+<div class="ag rv" id="au"></div></div></section>
 
 <!-- Gallery section -->
 <section class="dk" id="gallery"><div class="w">
@@ -201,14 +248,15 @@ dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh;
 <section class="dk" id="contact"><div class="w ct"><div class="rv"><h2>Start your project</h2><p style="margin-top:20px">We reply within one working day and can usually visit your site that week.</p>
 <p><b>Phone</b><br>+00 00000 00000</p><p><b>Email</b><br>hello@yourcompany.com</p><p><b>Office</b><br>Your address, city</p><p><b>Hours</b><br>Mon to Sat, 9:00 to 18:00</p></div>
 <div class="f rv"><div><label for="n">Name</label><input class="i" id="n" autocomplete="name"></div><div><label for="p">Phone</label><input class="i" id="p" type="tel" autocomplete="tel"></div>
-<div><label for="t">Project type</label><select id="t"><option>Exterior work</option><option>Interior work</option><option>Both inside and out</option><option>Not sure yet</option></select></div>
+<div><label for="t">Project type</label><select id="t"><option>Exterior work</option><option>Interior work</option><option>Both inside and out</option><option>Resort / hospitality</option><option>Auditorium</option><option>Not sure yet</option></select></div>
 <div><label for="m">Details</label><textarea id="m" class="i" placeholder="Location, size, what you want done, target dates"></textarea></div>
 <button class="btn" id="go" type="button">Send on WhatsApp</button></div></div></section>
 </main>
 <!-- Footer section -->
 <footer>
   <div class="w" style="justify-content:center;text-align:center;gap:0 18px">
-    <span>© 2026 Buildora | Licensed and insured contractor</span>
+    <span>© 2026 Buildora</span>
+    <span>Licensed and insured contractor</span>
   </div>
   <div class="w" style="justify-content:center;text-align:center;margin-top:4px">
     <span>Designed &amp; Developed by <strong style="color:var(--br)">GROWFERRY INDIA</strong></span>
@@ -235,9 +283,7 @@ var G=[
 {s:"assets/projects/i3.webp",c:"in",t:"Living Lounge",d:"Fluted panels, display niche and TV wall"},
 {s:"assets/projects/h6.webp",c:"ex",t:"Contemporary Cube Home",d:"Timber screen, balcony and covered parking"},
 {s:"assets/projects/i5.webp",c:"in",t:"Statement Staircase",d:"Timber treads with a pendant light drop"},
-{s:"assets/projects/h7.webp",c:"ex",t:"Angular Roof Residence",d:"Folded roof planes with landscaped frontage"},
 {s:"assets/projects/i4.webp",c:"in",t:"Double-Height Living",d:"Full-height glazing and a glass-rail staircase"},
-{s:"assets/projects/h8.webp",c:"ex",t:"A-Frame Studio",d:"Steel-framed glazing and exposed finishes"},
 {s:"assets/projects/i7.webp",c:"in",t:"Dining and Ceiling Design",d:"Layered false ceiling with cove lighting"},
 {s:"assets/projects/h9.webp",c:"ex",t:"Coastal Contemporary",d:"Colour-blocked facade with feature compound wall"},
 {s:"assets/projects/i8.webp",c:"in",t:"Courtyard Swing Lounge",d:"Indoor-outdoor deck with timber swing"},
@@ -267,6 +313,16 @@ $('#st').addEventListener('click',function(e){var b=e.target.closest('[data-s]')
 $$('[data-f]').forEach(function(b){b.onclick=function(){$$('[data-f]').forEach(function(x){x.setAttribute('aria-selected',x===b)});$$('.gi').forEach(function(p){p.classList.toggle('h',b.dataset.f!='all'&&p.dataset.c!=b.dataset.f)})}});
 /* Services tabs */
 $$('[data-t]').forEach(function(b){b.onclick=function(){$$('[data-t]').forEach(function(x){x.setAttribute('aria-selected',x===b)});$$('.sv').forEach(function(s){s.classList.toggle('on',s.id==b.dataset.t)})}});
+/* Resort section */
+var R=[{s:"assets/projects/h8.webp",c:"ex",t:"A-Frame Studio",d:"Steel-framed glazing and exposed finishes"},
+{s:"assets/projects/h7.webp",c:"ex",t:"Angular Roof Residence",d:"Folded roof planes with landscaped frontage"}];
+$('#rs').addEventListener('click',function(e){var a=e.target.closest('.rc');if(a)lb(R,+a.dataset.i)});
+/* Auditorium section: add photos by adding lines like {s:"assets/auditorium/a1.webp",t:"Title",d:"Caption"} */
+var AU=[];
+var ag=$('#au'),an=Math.max(3,AU.length),ah='';
+for(var k=0;k<an;k++){var q=AU[k];ah+=q?'<button data-i="'+k+'"><img src="'+q.s+'" alt="'+q.t+'" loading="lazy"><span>'+q.t+'<small>'+q.d+'</small></span></button>':'<div class="slot"><b>Auditorium photo</b><small>Image coming soon</small></div>'}
+ag.innerHTML=ah;
+ag.addEventListener('click',function(e){var b=e.target.closest('button');if(b)lb(AU,+b.dataset.i)});
 /* Scroll animation and counters */
 function count(el){if(el.dataset.d)return;el.dataset.d=1;var n=+el.dataset.n,sx=el.dataset.s||'',s=null;function f(t){s=s||t;var k=Math.min((t-s)/1800,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)))+sx;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);e.target.querySelectorAll('[data-n]').forEach(count)}})},{threshold:.12});
