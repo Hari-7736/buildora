@@ -318,6 +318,12 @@ var R=[{s:"assets/projects/h8.webp",c:"ex",t:"A-Frame Studio",d:"Steel-framed gl
 {s:"assets/projects/h7.webp",c:"ex",t:"Angular Roof Residence",d:"Folded roof planes with landscaped frontage"}];
 $('#rs').addEventListener('click',function(e){var a=e.target.closest('.rc');if(a)lb(R,+a.dataset.i)});
 /* Auditorium section: add photos by adding lines like {s:"assets/auditorium/a1.webp",t:"Title",d:"Caption"} */
+
+{s:"assets/projects/Au1.webp",t:"Title",d:"Caption"},
+{s:"assets/projects/Au2.webp",t:"Title",d:"Caption"},
+{s:"assets/projects/Au3.webp",t:"Title",d:"Caption"},
+
+  
 var AU=[];
 var ag=$('#au'),an=Math.max(3,AU.length),ah='';
 for(var k=0;k<an;k++){var q=AU[k];ah+=q?'<button data-i="'+k+'"><img src="'+q.s+'" alt="'+q.t+'" loading="lazy"><span>'+q.t+'<small>'+q.d+'</small></span></button>':'<div class="slot"><b>Auditorium photo</b><small>Image coming soon</small></div>'}
