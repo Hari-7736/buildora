@@ -322,7 +322,10 @@ $('#rs').addEventListener('click',function(e){var a=e.target.closest('.rc');if(a
 /* Auditorium section: add photos by adding lines like {s:"assets/auditorium/a1.webp",t:"Title",d:"Caption"} */
 
 
-var AU=[{s:"assets/projects/Au1.webp",t:"Title",d:"Caption"},{s:"assets/projects/Au2.webp",t:"Title",d:"Caption"},{s:"assets/projects/Au3.webp",t:"Title",d:"Caption"}];
+var AU=[{s:"assets/projects/Au1.webp",t:"MODERN AUDITORIUM COMPLEX",d:"Contemporary architectural design with elegant facade detailing and ambient exterior lighting."},
+        {s:"assets/projects/Au2.webp",t:"PREMIUM AUDITORIUM DINING",d:"A sophisticated dining space featuring rich wooden finishes, statement lighting, and refined interiors."},
+        {s:"assets/projects/Au3.webp",t:"LUXURY AUDITORIUM INTERIOR",d:"A thoughtfully designed interior combining geometric textures, warm wood finishes, and modern architectural lighting."}];
+  
 var ag=$('#au'),an=Math.max(3,AU.length),ah='';
 for(var k=0;k<an;k++){var q=AU[k];ah+=q?'<button data-i="'+k+'"><img src="'+q.s+'" alt="'+q.t+'" loading="lazy"><span>'+q.t+'<small>'+q.d+'</small></span></button>':'<div class="slot"><b>Auditorium photo</b><small>Image coming soon</small></div>'}
 ag.innerHTML=ah;
