@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <!-- Head section -->
 <meta charset="utf-8">
@@ -14,10 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"Buildora","url":"https://www.yourcompany.com/","telephone":"+00-00000-00000","email":"hello@yourcompany.com","address":{"@type":"PostalAddress","addressLocality":"Your city","addressCountry":"IN"},"openingHours":"Mo-Sa 09:00-18:00"}</script>
 <!-- Styles -->
 <style>
-/* Colours and fonts */
-:root{--bg:#F3F1EC;--fg:#161C1F;--mut:#5E686B;--card:#fff;--line:#DAD7CF;--ink:#0F1416;--on:#EDEBE5;--br:#C8A15A;--h:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--b:Manrope,system-ui,-apple-system,Segoe UI,Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101517;--fg:#ECEAE4;--mut:#9BA6A9;--card:#182024;--line:#2A3438}}
-:root[data-theme=dark]{--bg:#101517;--fg:#ECEAE4;--mut:#9BA6A9;--card:#182024;--line:#2A3438}
+/* Fixed dark theme — independent of desktop/mobile system appearance */
+:root{color-scheme:dark;--bg:#101517;--fg:#ECEAE4;--mut:#9BA6A9;--card:#182024;--line:#2A3438;--ink:#0F1416;--on:#EDEBE5;--br:#C8A15A;--h:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;--b:Manrope,system-ui,-apple-system,Segoe UI,Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 /* Base styles */
 *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--b);overflow-x:hidden}
